@@ -27,15 +27,15 @@
             border: 2px solid #ff3b3b;
             border-radius: 20px;
             box-shadow: 0 0 25px rgba(255, 59, 59, 0.25);
-            max-width: 1000px;
+            max-width: 1050px;
             width: 100%;
             overflow: hidden;
         }
         
-        /* القسم الأيسر: لوحة التحكم والتعديل */
+        /* القسم الأيسر: تشغيل التعديل */
         .control-panel {
-            flex: 1;
-            padding: 25px;
+            flex: 1.2;
+            padding: 20px;
             display: flex;
             flex-direction: column;
             justify-content: space-between;
@@ -46,49 +46,49 @@
             display: flex;
             align-items: center;
             gap: 12px;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .store-header img {
-            width: 50px;
-            height: 50px;
+            width: 45px;
+            height: 45px;
             border-radius: 50%;
             border: 2px solid #ff3b3b;
         }
         .store-header h2 {
-            font-size: 1.1rem;
+            font-size: 1rem;
             color: #ffffff;
         }
         .store-header span {
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             color: #888;
             display: block;
         }
         
         .firmware-box {
             background: #1a1d24;
-            border-radius: 12px;
-            padding: 15px;
-            margin-bottom: 20px;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 15px;
             border: 1px solid #2a2e38;
         }
         .firmware-title {
-            font-size: 0.85rem;
+            font-size: 0.75rem;
             color: #aaa;
-            margin-bottom: 10px;
+            margin-bottom: 8px;
             text-align: center;
         }
         .fw-grid {
             display: grid;
             grid-template-columns: repeat(3, 1fr);
-            gap: 8px;
-            margin-bottom: 12px;
+            gap: 6px;
+            margin-bottom: 8px;
         }
         .fw-item {
             background: #222630;
-            padding: 8px;
+            padding: 6px;
             border-radius: 6px;
             text-align: center;
-            font-size: 0.8rem;
+            font-size: 0.75rem;
             font-weight: bold;
             color: #ddd;
             border: 1px solid #333846;
@@ -100,41 +100,33 @@
         }
         .status-text {
             text-align: center;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #2ecc71;
             font-weight: bold;
         }
 
-        .btn-goldhen {
-            background: linear-gradient(135deg, #e60000, #990000);
-            color: white;
-            border: none;
-            padding: 16px;
-            border-radius: 12px;
-            font-size: 1.2rem;
-            font-weight: bold;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 10px;
-            box-shadow: 0 4px 15px rgba(230, 0, 0, 0.4);
-            transition: 0.3s;
-            text-decoration: none;
+        /* منطقة الهكر المدمجة */
+        #exploit-container {
             width: 100%;
+            height: 260px;
+            border: 1px solid #ff3b3b;
+            border-radius: 10px;
+            background: #000000;
             margin-bottom: 15px;
+            overflow: hidden;
         }
-        .btn-goldhen:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 6px 20px rgba(230, 0, 0, 0.6);
+        #exploit-container iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
         }
 
         .contact-info {
             background: #1a1d24;
-            padding: 12px;
+            padding: 10px;
             border-radius: 10px;
             text-align: center;
-            font-size: 0.85rem;
+            font-size: 0.8rem;
             color: #bbb;
             border: 1px solid #2a2e38;
         }
@@ -142,58 +134,51 @@
             color: #ff3b3b;
         }
 
-        /* القسم الأيمن: البانر والإعلان */
+        /* القسم الأيمن: البانر */
         .banner-panel {
-            flex: 1.2;
-            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('logo.png');
+            flex: 1;
+            background: linear-gradient(rgba(0,0,0,0.65), rgba(0,0,0,0.85)), url('logo.png');
             background-size: cover;
             background-position: center;
-            padding: 30px;
+            padding: 25px;
             display: flex;
             flex-direction: column;
             justify-content: center;
             align-items: center;
             text-align: center;
-            position: relative;
-            border-right: 1px solid #262930;
         }
         .banner-content h1 {
-            font-size: 2.2rem;
+            font-size: 2rem;
             color: #ffffff;
-            text-shadow: 0 0 10px rgba(0,0,0,0.8);
-            margin-bottom: 10px;
+            margin-bottom: 8px;
         }
         .banner-content p {
             color: #ff3b3b;
-            font-size: 1.1rem;
+            font-size: 1rem;
             font-weight: bold;
-            margin-bottom: 20px;
+            margin-bottom: 15px;
         }
         .features-list {
             list-style: none;
             text-align: right;
             background: rgba(0, 0, 0, 0.6);
-            padding: 15px 20px;
+            padding: 12px 15px;
             border-radius: 10px;
             backdrop-filter: blur(5px);
             border: 1px solid rgba(255, 255, 255, 0.1);
         }
         .features-list li {
-            font-size: 0.9rem;
-            margin-bottom: 8px;
+            font-size: 0.85rem;
+            margin-bottom: 6px;
             color: #ddd;
         }
         .features-list li:last-child {
             margin-bottom: 0;
         }
 
-        /* تجاوب الشاشة للموبايل والـ PS4 */
         @media (max-width: 768px) {
             .container {
                 flex-direction: column-reverse;
-            }
-            .banner-panel {
-                min-height: 200px;
             }
         }
     </style>
@@ -201,14 +186,14 @@
 <body>
 
 <div class="container">
-    <!-- القسم الأيسر: تشغيل التعديلة -->
+    <!-- القسم الأيسر -->
     <div class="control-panel">
         <div>
             <div class="store-header">
                 <img src="logo.png" alt="Logo">
                 <div>
                     <h2>متجر MOHAMMED AI</h2>
-                    <span>PS4 7.00 - 13.52 Host</span>
+                    <span>PS4 Host Express</span>
                 </div>
             </div>
 
@@ -222,12 +207,13 @@
                     <div class="fw-item">12.50-13.00</div>
                     <div class="fw-item active">13.02-13.52</div>
                 </div>
-                <div class="status-text">تم اكتشاف الإصدار - جاهز للتفعيل</div>
+                <div class="status-text">جارٍ تحميل التعديل أوتوماتيكياً...</div>
             </div>
 
-            <a href="https://raw13g.github.io/jb.html" class="btn-goldhen">
-                <span>▶ تشغيل GoldHEN</span>
-            </a>
+            <!-- نافذة تشغيل الثغرة المباشرة -->
+            <div id="exploit-container">
+                <iframe src="https://raw13g.github.io/jb.html"></iframe>
+            </div>
         </div>
 
         <div class="contact-info">
@@ -236,7 +222,7 @@
         </div>
     </div>
 
-    <!-- القسم الأيمن: الإعلان والغلاف -->
+    <!-- القسم الأيمن -->
     <div class="banner-panel">
         <div class="banner-content">
             <h1>MOHAMMED AI</h1>
