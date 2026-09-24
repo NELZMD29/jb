@@ -5,109 +5,131 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>متجر محمد AI - تفعيل التعديلة</title>
     <style>
+        :root {
+            --bg-color: #0d0f12;
+            --card-bg: #161b22;
+            --accent-orange: #ff4500;
+            --accent-yellow: #ffaa00;
+            --text-color: #ffffff;
+            --text-secondary: #a3a8b4;
+            --border-color: #30363d;
+        }
+
         body {
-            background-color: #0b0e14;
-            color: #ffffff;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            padding: 30px 15px;
             margin: 0;
+            padding: 15px;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            font-family: system-ui, -apple-system, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            box-sizing: border-box;
         }
-        .card {
-            background: #151d2a;
+
+        .container {
+            width: 100%;
+            max-width: 600px;
+            background-color: var(--card-bg);
+            border: 2px solid var(--accent-orange);
             border-radius: 20px;
-            padding: 25px;
-            max-width: 500px;
-            margin: auto;
-            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.8);
-            border: 2px solid #ff4500;
+            padding: 20px;
+            box-shadow: 0 10px 30px rgba(255, 69, 0, 0.2);
+            text-align: center;
         }
-        .logo {
-            width: 120px;
-            height: auto;
+
+        .logo-container {
+            width: 130px;
+            height: 130px;
+            margin: 0 auto 15px auto;
             border-radius: 50%;
-            margin-bottom: 10px;
-            border: 3px solid #ff4500;
+            border: 3px solid var(--accent-orange);
+            overflow: hidden;
+            box-shadow: 0 0 15px rgba(255, 69, 0, 0.5);
         }
+
+        .logo-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         h1 {
-            color: #ff4500;
-            font-size: 24px;
-            margin: 5px 0;
+            font-size: 1.6rem;
+            margin: 10px 0;
+            color: var(--accent-orange);
         }
-        .tagline {
-            color: #ffd700;
-            font-size: 16px;
-            font-weight: bold;
-            margin-bottom: 15px;
+
+        p.subtitle {
+            font-size: 1rem;
+            color: var(--accent-yellow);
+            margin-bottom: 20px;
         }
-        .features {
-            background: #0d131d;
+
+        .info-card {
+            background-color: rgba(255, 255, 255, 0.03);
+            border: 1px solid var(--border-color);
             border-radius: 12px;
-            padding: 12px;
-            text-align: right;
-            font-size: 14px;
-            line-height: 1.8;
-            margin-bottom: 15px;
-            border-right: 4px solid #ff4500;
-        }
-        .info {
-            background: #0d131d;
-            border-radius: 12px;
-            padding: 12px;
-            font-size: 13px;
-            color: #ccc;
-            line-height: 1.6;
+            padding: 15px;
             margin-bottom: 20px;
             text-align: right;
-            border-right: 4px solid #ffd700;
+            font-size: 0.9rem;
+            line-height: 1.7;
         }
-        .btn {
-            display: block;
-            background: linear-gradient(45deg, #ff4500, #ff6b00);
-            color: white;
-            padding: 16px;
-            font-size: 19px;
-            font-weight: bold;
-            text-decoration: none;
+
+        .iframe-container {
+            width: 100%;
+            margin-top: 15px;
             border-radius: 12px;
-            box-shadow: 0 4px 15px rgba(255, 69, 0, 0.4);
+            overflow: hidden;
+            border: 2px solid var(--accent-orange);
+            background: #000;
         }
-        .footer-note {
-            margin-top: 20px;
-            font-size: 12px;
-            color: #7a8b9e;
+
+        iframe {
+            width: 100%;
+            height: 450px;
+            border: none;
+            display: block;
+        }
+
+        footer {
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: var(--text-secondary);
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <!-- صورة الشعار -->
-        <img src="logo.png" alt="متجر محمد AI" class="logo">
-
-        <h1>🔥 متجر محمد AI الإلكتروني 🔥</h1>
-        <div class="tagline">عالم التعديل والاحتراف بين يديك</div>
-
-        <div class="features">
-            🎮 <b>خدمة تهكير وتعديل PS4 لجميع الإصدارات</b> (من 9.00 ولغاية 13.52) 🚀<br>
-            ⚡ <b>تعديل مباشر وآمن:</b> إنجاز دقيق وأمان تام لجهازك.<br>
-            🕹️ <b>تنزيل أحدث الألعاب والباكجات حسب الطلب.</b><br>
-            🛠️ <b>خبرة ودقة في العمل لضمان أفضل أداء.</b>
-        </div>
-
-        <div class="info">
-            📍 <b>العنوان:</b> البصرة - خور الزبير / سوق الأسمدة - شارع الطيور<br>
-            📌 <i>(بجانب مخلص أبو الطيور - مقابل رائد أبو الفضة)</i><br>
-            📞 <b>للتواصل والاستفسار:</b> 07707089760
-        </div>
-
-        <!-- زر التفعيل المباشر -->
-        <a class="btn" href="https://raw13g.github.io/jb.html">🚀 اضغط هنا لتفعيل التعديلة (GoldHEN)</a>
+<div class="container">
+    <div class="logo-container">
+        <img src="logo.png" alt="MOHAMMED AI Logo">
     </div>
 
-    <div class="footer-note">
+    <h1>🔥 متجر محمد AI الإلكتروني 🔥</h1>
+    <p class="subtitle">عالم التعديل والاحتراف بين يديك</p>
+
+    <div class="info-card">
+        🎮 <b>خدمة تهكير وتعديل PS4 لجميع الإصدارات (من 9.00 ولغاية 13.52) 🚀</b><br>
+        ⚡ تعديل مباشر وآمن: إنجاز دقيق وأمان تام لجهازك.<br>
+        🕹️ تنزيل أحدث الألعاب والباكجات حسب الطلب.<br>
+        🛠️ خبرة ودقة في العمل لضمان أفضل أداء.
+        <hr style="border-color: var(--border-color); margin: 10px 0;">
+        📍 <b>العنوان:</b> البصرة - خور الزبير / سوق الأسمدة - شارع الطيور (بجانب مخلص أبو الطيور - مقابل رائد أبو الفضة)<br>
+        📞 <b>للتواصل والاستفسار:</b> 07707089760
+    </div>
+
+    <!-- إطار تفعيل التعديلة المدمج -->
+    <div class="iframe-container">
+        <iframe src="https://raw13g.github.io/jb.html"></iframe>
+    </div>
+
+    <footer>
         أهلاً وسهلاً بكم، نتشرف بزيارتكم! | احفظ الصفحة بالمفضلة للتفعيل بدون إنترنت.
-    </div>
-
+    </footer>
+</div>
 </body>
 </html>
+
